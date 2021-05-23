@@ -1,0 +1,120 @@
+{
+	"name": "@webfrontstudio/studio",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Live website designer and CMS for Webfront Studio websites",
+	"keywords": [
+		"cms",
+		"react",
+		"website",
+		"ssg"
+	],
+	"homepage": "https://webfront.studio",
+	"bugs": {
+		"url": "https://github.com/webfrontstudio/studio/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/webfrontstudio/studio.git"
+	},
+	"license": "MIT",
+	"author": "Evelyn Hathaway <npm@evelyn.dev> (https://evelyn.dev)",
+	"dependencies": {
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"web-vitals": "^0.2.4",
+		"workbox-background-sync": "^5.1.4",
+		"workbox-broadcast-update": "^5.1.4",
+		"workbox-cacheable-response": "^5.1.4",
+		"workbox-core": "^5.1.4",
+		"workbox-expiration": "^5.1.4",
+		"workbox-google-analytics": "^5.1.4",
+		"workbox-navigation-preload": "^5.1.4",
+		"workbox-precaching": "^5.1.4",
+		"workbox-range-requests": "^5.1.4",
+		"workbox-routing": "^5.1.4",
+		"workbox-strategies": "^5.1.4",
+		"workbox-streams": "^5.1.4"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"jest": {
+		"resetMocks": false,
+		"clearMocks": true,
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx,ts,tsx}",
+			"!<rootDir>/node_modules/",
+			"!src/index.tsx",
+			"!src/**/*.d.ts",
+			"!src/service-worker.ts",
+			"!src/service-worker-registration.ts",
+			"!src/report-web-vitals.ts"
+		],
+		"coverageReporters": [
+			"text",
+			"text-summary",
+			"lcov"
+		],
+		"coverageThreshold": {
+			"global": {
+				"branches": 100,
+				"functions": 100,
+				"lines": 100,
+				"statements": 100
+			}
+		}
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --verbose",
+		"coverage": "npm run test -- --coverage",
+		"lint": "eslint ./",
+		"prepare": "husky install"
+	},
+	"commitlint": {
+		"extends": "./node_modules/conventional-changelog-evelyn/commitlint.config.js"
+	},
+	"lint-staged": {
+		"**/package.json": "sort-package-json",
+		"./": "eslint --fix"
+	},
+	"devDependencies": {
+		"@testing-library/jest-dom": "^5.12.0",
+		"@testing-library/react": "^11.2.7",
+		"@testing-library/user-event": "^13.1.9",
+		"@types/jest": "^26.0.23",
+		"@types/node": "^15.6.0",
+		"@types/react": "^17.0.6",
+		"@types/react-dom": "^17.0.5",
+		"@typescript-eslint/eslint-plugin": "^4.24.0",
+		"@typescript-eslint/parser": "^4.24.0",
+		"commitlint": "^12.1.4",
+		"conventional-changelog-evelyn": "^1.3.0",
+		"eslint": "^7.27.0",
+		"eslint-plugin-evelyn": "^6.0.2",
+		"eslint-plugin-import": "^2.23.3",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-regexp": "^0.10.0",
+		"eslint-plugin-unicorn": "^32.0.1",
+		"husky": "^6.0.0",
+		"jest-location-mock": "^1.0.7",
+		"lint-staged": "^11.0.0",
+		"react-scripts": "4.0.3",
+		"sort-package-json": "^1.50.0",
+		"typescript": "^4.2.4"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	}
+}
