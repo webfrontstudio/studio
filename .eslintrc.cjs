@@ -6,10 +6,11 @@ module.exports = {
 	"extends": [
 		"plugin:evelyn/default",
 		"plugin:evelyn/typescript",
+		"plugin:evelyn/react",
 	],
 
 	"ignorePatterns": [
-		"lib",
+		"build",
 		"coverage",
 	],
 };
