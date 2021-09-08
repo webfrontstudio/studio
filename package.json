@@ -110,7 +110,7 @@
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"eslint-plugin-regexp": "^0.13.2",
 		"eslint-plugin-unicorn": "^32.0.1",
-		"husky": "^6.0.0",
+		"husky": "^7.0.2",
 		"jest-location-mock": "^1.0.9",
 		"lint-staged": "^11.1.2",
 		"react-scripts": "4.0.3",
